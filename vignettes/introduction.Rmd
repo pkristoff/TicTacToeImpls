@@ -1,0 +1,40 @@
+---
+title: "ticTacToeImpls"
+author: "Paul Kristoff"
+date: "2017-12-31"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This package is a container  for creating a tic-tac-toe machine-learning game.  There are 3 basic implementation:
+
+* Humnan vs. Human
+    * Description:  Simply an interface where 2 humans can play.
+    * File: human-vs-human.R
+    * UI: Shiny
+    * Running: "Run App"
+
+* Humnan vs. Tree
+    * Description:    Attempts at a learning tree structure based on list.
+    * File: human-vs-tree.R
+    * UI: Shiny
+    * Running: "Run App"
+
+* Humnan vs. DataSet
+    * Description:  Generate all possible moves & use minimax algorithm to play machine.
+    * File: human-vs-dataSet.R
+    * UI: Plot
+    * Running: 
+        1.  "Source"
+        1.  system.time(ttt <- TTTTree()) # Generate moves
+        1.  tic.tac.toe(ttt)
